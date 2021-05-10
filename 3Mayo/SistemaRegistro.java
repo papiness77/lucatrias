@@ -38,11 +38,7 @@ public class SistemaRegistro {
         System.out.println("Ingrese el dni de la persona que desea eliminar de esta vida");
         int dnipersonaeliminar = Dnipersonaaeliminar.nextInt();
         boolean asssa = false;
-        int i = 0;
         for (Persona a : this.ArrayPersona) {
-            if (i < this.ArrayPersona.size()) {
-            i += 1;
-            a = this.ArrayPersona.get(i);
             int afipa = a.getDni();
             if (afipa == dnipersonaeliminar) {
                 asssa = true;
@@ -50,7 +46,7 @@ public class SistemaRegistro {
                 this.ArrayPersona.remove(a);
                 break;
             }
-        }
+
         }
         if (asssa == false) {
             System.out.println("Esta persona no existe");
@@ -62,11 +58,7 @@ public class SistemaRegistro {
         System.out.println("Ingrese el dni de la persona que desea modificar");
         int dnipersonacambiar = Dnipersonaacambiar.nextInt();
         boolean asssa = false;
-        int i = 0;
         for (Persona a : this.ArrayPersona) {
-            i += 1;
-            if (i < this.ArrayPersona.size()) {
-                a = this.ArrayPersona.get(i);
                 if (a.getDni() == dnipersonacambiar) {
                     asssa = true;
                     Scanner SNUevodni = new Scanner(System.in);
@@ -83,7 +75,6 @@ public class SistemaRegistro {
                     a.setDni(Nuevodni);
                 }
             }
-        }
         if (asssa == false) {
             System.out.println("Esta persona no existe");
         }
@@ -91,28 +82,18 @@ public class SistemaRegistro {
 
     public void PersonasMayores18() {
         System.out.println("Personas mayor de 18 son:");
-        int i = 0;
         for (Persona a : this.ArrayPersona) {
-            i += 1;
-            if (i < this.ArrayPersona.size()) {
-                a = this.ArrayPersona.get(i);
                 if (a.getEdad() >= 18) {
                     String afaa = a.getNombre();
                     System.out.println(afaa);
                 }
-            }
         }
     }
 
         public void ImprimirTodaslasPersonas () {
-            int i = 0;
             for (Persona a : this.ArrayPersona) {
-                i += 1;
-                if (i < this.ArrayPersona.size()) {
-                    a = this.ArrayPersona.get(i);
                     String nombre = a.getNombre();
                     System.out.println(nombre);
                 }
             }
         }
-}
