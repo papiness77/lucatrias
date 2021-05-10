@@ -32,27 +32,30 @@ public class SistemaRegistro{
         Scanner Dnipersonaaeliminar = new Scanner(System.in);
         System.out.println("Ingrese el dni de la persona que desea eliminar de esta vida");
         int dnipersonaeliminar = Dnipersonaaeliminar.nextInt();
+        boolean asssa = false;
         for(int i=0;i<this.ArrayPersona.size();i++){
             Persona a = this.ArrayPersona.get(i);
             int afipa=a.getDni();
             if(afipa==dnipersonaeliminar){
+                asssa = true;
                 System.out.println(a.getNombre()+"Esta persona fue borrada");
                 this.ArrayPersona.remove(a);
                 break;
             }
-
-            else{
-                System.out.println("Esa persona no existe");
-            }
+        }
+        if(asssa==false){
+            System.out.println("Esta persona no existe");
         }
     }
     public void ModificarDatosPersona(){
         Scanner Dnipersonaacambiar = new Scanner(System.in);
         System.out.println("Ingrese el dni de la persona que desea modificar");
         int dnipersonacambiar = Dnipersonaacambiar.nextInt();
+        boolean asssa = false;
         for(int i=0;i<this.ArrayPersona.size();i++){
             Persona a = this.ArrayPersona.get(i);
             if(a.getDni()==dnipersonacambiar){
+                asssa = true;
                 Scanner SNUevodni = new Scanner(System.in);
                 Scanner SNUevonombre = new Scanner(System.in);
                 Scanner SNUevaedad = new Scanner(System.in);
@@ -66,9 +69,9 @@ public class SistemaRegistro{
                 a.setNombre(Nuevonombre);
                 a.setDni(Nuevodni);
             }
-            else{
-                System.out.println("Esa persona no existe");
-            }
+        }
+        if(asssa==false){
+            System.out.println("Esta persona no existe");
         }
     }
     public void PersonasMayores18(){
