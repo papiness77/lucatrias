@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+    <title>Calculadoras</title>
+</head>
+<body>
+<p>ingrese un numero</p>
+<input type="number" id="n1">
+
+<p>ingrese su otro numero</p>
+<input type="number" id="n2">
+
+<button onclick="suma()">suma</button>
+<button onclick="resta()">resta</button>
+<button onclick="multiplicacion()">multiplicar</button>
+<button onclick="division()">dividir</button>
+<h1 id="cuadroderespuesta"></h1>
+
+<script>
+    function suma(){
+        var n1ingresado = document.getElementById("n1").value;
+        var n2ingresado = document.getElementById("n2").value;
+
+        var resultado = parseInt(n1ingresado) + parseInt(n2ingresado);
+
+        document.getElementById("cuadroderespuesta").innerHTML=resultado;
+        document.getElementById("cuadroderespuesta").style.color="red";
+
+    }
+    function resta(){
+        var n1ingresado = document.getElementById("n1").value;
+        var n2ingresado = document.getElementById("n2").value;
+
+        var resultado = parseInt(n1ingresado) - parseInt(n2ingresado);
+
+        document.getElementById("cuadroderespuesta").innerHTML=resultado;
+        document.getElementById("cuadroderespuesta").style.color="red";
+
+    }
+    function multiplicacion(){
+        var n1ingresado = document.getElementById("n1").value;
+        var n2ingresado = document.getElementById("n2").value;
+
+        var resultado = parseInt(n1ingresado) * parseInt(n2ingresado);
+
+        document.getElementById("cuadroderespuesta").innerHTML=resultado;
+        document.getElementById("cuadroderespuesta").style.color="red";
+
+    }
+    function division(){
+        var n1ingresado = document.getElementById("n1").value;
+        var n2ingresado = document.getElementById("n2").value;
+
+        var resultado = parseInt(n1ingresado) / parseInt(n2ingresado);
+
+        document.getElementById("cuadroderespuesta").innerHTML=resultado;
+        document.getElementById("cuadroderespuesta").style.color="red";
+
+    }
+</script>
+
+</body>
+</html>

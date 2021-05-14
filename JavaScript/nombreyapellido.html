@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+<title>Butakka Trailers | 1917</title>
+</head>
+<body>
+<p>ingrese su nombre</p>
+<input type="text" id="nombre">
+
+<p>ingrese su apellido</p>
+<input type="text" id="apellido">
+
+<p>ingrese su edad</p>
+<input type="number" id="edad">
+
+<button onclick="mostrardatos()">mostrar datos ingresados</button>
+<h1 id="cuadroderespuesta"></h1>
+<h1 id="cuadroderespuesta2"></h1>
+<h1 id="cuadroderespuesta3"></h1>
+
+<script>
+function mostrardatos(){
+var nombreingresado = document.getElementById("nombre").value;
+var apellidoingresado = document.getElementById("apellido").value;
+var edadingresado = document.getElementById("edad").value;
+
+var mensaje="Mi nombre es" +  nombreingresado;
+var mensaje2="Mi apellido es" +  apellidoingresado;
+var mensaje3="y mi edad es" +  edadingresado;
+
+document.getElementById("cuadroderespuesta").innerHTML=mensaje;
+    document.getElementById("cuadroderespuesta2").innerHTML=mensaje2;
+    document.getElementById("cuadroderespuesta3").innerHTML=mensaje3;
+
+    document.getElementById("cuadroderespuesta").style.color="red";
+    document.getElementById("cuadroderespuesta2").style.color="yellow";
+    document.getElementById("cuadroderespuesta3").style.color="orange";
+
+    if (edadingresado>18){
+        document.body.style.backgroundColor = "blue";
+    }
+    else if(edadingresado<18){
+        document.body.style.backgroundColor = "green";
+    }
+
+
+}
+
+
+</script>
+
+</body>
+</html>
