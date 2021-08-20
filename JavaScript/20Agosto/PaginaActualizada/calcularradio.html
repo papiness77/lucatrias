@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="calcularradio.css" media="screen" />
+  <title>Calculadoras</title>
+</head>
+<body>
+<p>ingrese un numero</p>
+<input type="number" id="n1">
+
+<p id="hola">ingrese su otro numero</p >
+<input type="number" id="n2">
+
+<button onclick="circulo()">circulo</button>
+<button onclick="esfera()">esfera</button>
+<button onclick="cuadrado()">cuadrado</button>
+<button onclick="cubo()">cubo</button>
+<button onclick="triangulo()">triangulo</button>
+<button id="calcular" onclick="calcular()">calcular</button>
+
+<h1 id="cuadroderespuesta"></h1>
+
+<script>
+  function circulo(){
+    var n1ingresado = document.getElementById("n1").value;
+
+    var resultado = parseInt(n1ingresado)*Math.PI*parseInt(n1ingresado);
+
+    document.getElementById("cuadroderespuesta").innerHTML=resultado;
+
+  }
+  function esfera(){
+    var n1ingresado = document.getElementById("n1").value;
+
+    var resultado = parseInt(n1ingresado)*Math.PI*parseInt(n1ingresado)*4;
+
+    document.getElementById("cuadroderespuesta").innerHTML=resultado;
+
+  }
+  function cuadrado(){
+    var n1ingresado = document.getElementById("n1").value;
+
+    var resultado = parseInt(n1ingresado) * parseInt(n1ingresado);
+
+    document.getElementById("cuadroderespuesta").innerHTML=resultado;
+  }
+  function cubo(){
+    var n1ingresado = document.getElementById("n1").value;
+
+    var resultado = parseInt(n1ingresado) * parseInt(n1ingresado)*6;
+
+    document.getElementById("cuadroderespuesta").innerHTML=resultado;
+
+  }
+  function triangulo(){
+    let n2 = document.getElementById("n2");
+    let hola = document.getElementById("hola");
+    let calcular = document.getElementById("calcular");
+
+    n2.style.display = "inline-block";
+    hola.style.display = "inline-block";
+    calcular.style.display = "inline-block";
+  }
+  function calcular(){
+    var n1ingresado = document.getElementById("n1").value;
+    var n2ingresado = document.getElementById("n2").value;
+
+    var resultado = (parseInt(n1ingresado) * parseInt(n1ingresado))/2;
+
+    document.getElementById("cuadroderespuesta").innerHTML=resultado;
+
+    let hola = document.getElementById("hola");
+    let calcular = document.getElementById("calcular");
+
+    n2ingresado.style.display = "none";
+    hola.style.display = "none";
+    calcular.style.display = "none";
+
+  }
+</script>
+
+</body>
+</html>
