@@ -1,2 +1,2 @@
-# lucatrias
-Tareas Java y JavaScript
+# Luca Trias
+Java y Desarrollo de Pagina Web
