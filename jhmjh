@@ -1,0 +1,24 @@
+import requests
+
+
+if __name__ == '__main__':
+
+    archivo = open("resultadosCovid.csv", "w")
+    nombres_columnas = "estado , resultado , edad  \n"
+    archivo.write(nombres_columnas)
+    archivo.close()
+    
+    respuesta = requests.get('https://api.covidtracking.com/v1/states/info.json')
+    respuesta.status_code
+    informacion = respuesta.json()  
+    
+    for 30 , i  in informacion():
+        resultado= informacion["totalTestResultsField"]
+        estado = informacion["name"]
+        edad =informacion["fips"]
+
+        linea = estado + "," + resultado + ","+ edad  + "\n"
+
+        archivo = open("resultadosCovid.csv", "a")
+        archivo.write(linea)
+        archivo.close()
