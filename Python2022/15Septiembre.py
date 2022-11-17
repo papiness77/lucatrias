@@ -27,3 +27,8 @@ image = cv2.imread('/content/caras/imagen0.jpg')
 copia_imagen = image.copy()
 
 rostros = clasificador_de_rostros.detectMultiScale(image)
+
+for(x,y,ancho,alto) in rostros:
+    cv2.rectangle(image(x,y),(x+ancho,y+alto),(0,255,255),2)
+    rostro = copia_imagen[y:y+alto,y+ancho]
+    cv2.imwrite('foto_rostro_{id}.jpg',rostro)
